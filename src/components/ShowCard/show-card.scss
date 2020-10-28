@@ -1,0 +1,22 @@
+.show-card {
+  .v-image__image {
+    transition: transform .15s;
+  }
+  .v-chip {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 1;
+  }
+  a {
+    text-decoration: none;
+  }
+  .v-card {
+    position: relative;
+    &:hover {
+      .v-image__image {
+        transform: scale(1.15);
+      }
+    }
+  }
+}

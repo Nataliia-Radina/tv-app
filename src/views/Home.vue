@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <ShowList :shows="todayShows" />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ShowList from '@/components/ShowList/ShowList.vue'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    ShowList
+  },
+  computed: {
+    today () {
+      const now = new Date(Date.now())
+      const dateToday = `${now.getFullYear()}-${(now.getMonth() + 1)}-${now.getDate()}`
+      return dateToday
+    },
+    ...mapState(['todayShows'])
+  },
+  methods: {
+    ...mapActions(['getTodayShows'])
+  },
+  mounted () {
+    this.getTodayShows(this.today)
   }
 }
 </script>
