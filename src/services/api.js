@@ -1,5 +1,5 @@
 const URL = {
-  BASE: 'http://api.tvmaze.com',
+  BASE: process.env.NODE_ENV === 'production' ? 'https://api.tvmaze.com' : 'http://api.tvmaze.com',
   SEARCH: '/search/shows?q=',
   SCHEDULE: '/schedule',
   SHOWS: '/shows',
