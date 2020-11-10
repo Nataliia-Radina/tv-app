@@ -6,7 +6,7 @@
     dense
     hide-details
     rounded
-    :v-model="value"
+    :value="value"
     :placeholder="placeholder"
     @input="$emit('queryChange',  $event)"
     @click:clear="$emit('clearInput')"
@@ -25,7 +25,7 @@ export default {
   props: {
     value: {
       type: String,
-      default: ''
+      required: true
     },
     placeholder: {
       type: String,

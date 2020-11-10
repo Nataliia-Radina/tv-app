@@ -6,7 +6,7 @@ export default {
   },
   methods: {
     getImageSrc (image) {
-      return image ? image.original : this.defaultImageSrc
+      return image ? image.original.replace('http', 'https') : this.defaultImageSrc
     }
   }
 }

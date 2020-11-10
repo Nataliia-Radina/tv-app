@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render CastCard component 1`] = `
+<v-col-stub cols="6" sm="4" md="3" xl="2" tag="div">
+  <v-card-stub loaderheight="4" tag="div" tile="true">
+    <v-img-stub height="200px" alt="Emilia Clarke" options="[object Object]" position="center center" src="src-original-1" transition="fade-transition"></v-img-stub>
+    <v-card-text-stub><b>Emilia Clarke</b> as Daenerys Targaryen
+    </v-card-text-stub>
+  </v-card-stub>
+</v-col-stub>
+`;

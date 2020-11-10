@@ -6,8 +6,7 @@
     lg="2"
     class="show-card"
   >
-    <router-link :to="`/show/${show.show.id}`">
-    <v-card tile>
+    <v-card tile @click="onCardClick">
       <v-chip small color="indigo" v-if="show.airtime">
         <v-icon small left>
           mdi-clock
@@ -29,7 +28,6 @@
         </span>
       </v-card-text>
     </v-card>
-    </router-link>
   </v-col>
 </template>
 
@@ -49,6 +47,12 @@ export default {
   computed: {
     rating () {
       return this.show.show.rating.average ? this.show.show.rating.average : '-'
+    }
+  },
+  methods: {
+    onCardClick () {
+      this.$router.push(`/show/${this.show.show.id}`)
+      this.$emit('cardClicked')
     }
   }
 }

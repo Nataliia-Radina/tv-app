@@ -25,7 +25,8 @@
     <v-main>
       <v-container>
         <v-row>
-          <ShowList :shows="searchShows" v-if="searchQuery"></ShowList>
+          <p v-if="hasError">Something went wrong! Please try again later</p>
+          <ShowList @cardClicked="clearInput" :shows="searchShows" v-if="searchQuery"></ShowList>
           <router-view v-else />
         </v-row>
       </v-container>
@@ -50,7 +51,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['searchShows'])
+    ...mapState(['searchShows', 'hasError'])
   },
   methods: {
     searchShowsByQuery (val) {

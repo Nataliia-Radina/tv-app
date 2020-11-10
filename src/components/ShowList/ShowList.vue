@@ -1,7 +1,7 @@
 <template>
   <v-col class="col-12">
     <v-row>
-      <ShowCard :show="show" v-for="show in shows" :key="show.id" />
+      <ShowCard :show="show" @cardClicked="$emit('cardClicked')" v-for="show in shows" :key="show.id" />
     </v-row>
   </v-col>
 </template>

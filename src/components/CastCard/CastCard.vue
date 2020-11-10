@@ -1,6 +1,5 @@
 <template>
   <v-col
-    :key="person.id"
     cols="6"
     sm="4"
     md="3"
@@ -18,7 +17,7 @@
 <script>
 import ImageSrc from '@/mixins/ImageSrc'
 export default {
-  name: 'CardCast',
+  name: 'CastCard',
   mixins: [ImageSrc],
   props: {
     person: {

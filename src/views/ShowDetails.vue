@@ -64,8 +64,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-import CastCard from '@/components/CastCard/CastCard.vue'
+import { mapState, mapActions, mapMutations } from 'vuex'
+import CastCard from '@/components/CastCard/CastCard'
 import ImageSrc from '@/mixins/ImageSrc'
 
 export default {
@@ -83,11 +83,15 @@ export default {
   mounted () {
     this.getShowDetails(this.id)
   },
+  beforeDestroy () {
+    this.setShowDetails({})
+  },
   computed: {
     ...mapState(['showDetails'])
   },
   methods: {
-    ...mapActions(['getShowDetails'])
+    ...mapActions(['getShowDetails']),
+    ...mapMutations(['setShowDetails'])
   }
 }
 </script>

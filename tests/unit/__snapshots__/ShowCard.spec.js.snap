@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render ShowCard component 1`] = `
+<v-col-stub cols="6" sm="4" md="3" lg="2" tag="div" class="show-card">
+  <v-card-stub loaderheight="4" tag="div" tile="true">
+    <v-chip-stub color="indigo" small="true" activeclass="" tag="span" active="true" closeicon="$delete" filtericon="$complete">
+      <v-icon-stub small="" left="">
+        mdi-clock
+      </v-icon-stub>
+      00:00
+    </v-chip-stub>
+    <v-img-stub height="200px" options="[object Object]" position="center center" src="src-original-1" transition="fade-transition"></v-img-stub>
+    <v-card-subtitle-stub class="text-center pa-2 pb-1">
+      <h4 class="text-truncate">
+        Show1
+      </h4>
+    </v-card-subtitle-stub>
+    <v-card-text-stub aligncenter="" align-center="" class="px-2 pt-0 pb-3 text-right"><span class="grey--text text--lighten-2"><v-icon-stub small="" color="yellow accent-4">
+          mdi-star
+        </v-icon-stub>
+        5.8
+      </span></v-card-text-stub>
+  </v-card-stub>
+</v-col-stub>
+`;
